@@ -92,4 +92,81 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	<properties>
+		<liferay.version>6.2.0-ga1</liferay.version>
+        <plugin.type>portlet</plugin.type>
+        <liferay.maven.plugin.version>6.2.0-ga1</liferay.maven.plugin.version>
+        <liferay.auto.deploy.dir>C:\servers\liferay-portal-6.2-ce-ga2\deploy</liferay.auto.deploy.dir>
+        <liferay.app.server.deploy.dir>C:\servers\liferay-portal-6.2-ce-ga2\tomcat-7.0.42\webapps</liferay.app.server.deploy.dir>
+        <liferay.app.server.lib.global.dir>C:\servers\liferay-portal-6.2-ce-ga2\tomcat-7.0.42\lib\ext</liferay.app.server.lib.global.dir>
+        <liferay.app.server.portal.dir>C:\servers\liferay-portal-6.2-ce-ga2\tomcat-7.0.42\webapps\ROOT</liferay.app.server.portal.dir>
+	</properties>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>liferay-previews</id>
+			<url>https://repository.liferay.com/nexus/content/repositories/liferay-previews/</url>
+		</repository>
+
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>liferay-releases-ce</id>
+			<url>https://repository.liferay.com/nexus/content/repositories/liferay-releases-ce/</url>
+		</repository>
+
+
+		<repository>
+			<id>liferay-ce</id>
+			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/com/liferay/portal/</url>
+		</repository>
+	</repositories>
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>liferay-previews</id>
+			<url>https://repository.liferay.com/nexus/content/repositories/liferay-previews/</url>
+		</pluginRepository>
+
+		<pluginRepository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>liferay-releases-ce</id>
+			<url>https://repository.liferay.com/nexus/content/repositories/liferay-releases-ce/</url>
+		</pluginRepository>
+
+
+		<pluginRepository>
+			<id>liferay-ce</id>
+			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/com/liferay/portal/</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
